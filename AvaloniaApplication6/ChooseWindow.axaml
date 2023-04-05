@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication6.ChooseWindow"
+        Title="Выберите формат посещения"
+        Width="1024"
+        Height="768"
+        HorizontalContentAlignment="Center"
+        Margin="0"
+        Padding="0">
+    <StackPanel
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch"
+        Background="White"
+        Orientation="Horizontal"
+        Spacing="100">
+        <Button
+            Content="Личное посещение"
+            Width="400"
+            Height="400"
+            CornerRadius="30"
+            Background="LightBlue"/>
+        <Button
+            Content="Групповое посещение"
+            Width="400"
+            Height="400"
+            CornerRadius="30"
+            Background="LightBlue"
+            Click="OpenGroupWindow"/>
+    </StackPanel>
+</Window>

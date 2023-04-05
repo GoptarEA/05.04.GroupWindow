@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication6.MainWindow"
+        Title="AvaloniaApplication6" Opened="TopLevel_OnOpened">
+    <Grid>
+        <DataGrid 
+            x:Name="PersonsList" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            Margin="10" 
+            Foreground="Black" 
+            AlternatingRowBackground="White"
+            HorizontalAlignment="Center"
+            RowBackground="White"
+            CornerRadius="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Binding="{Binding Path=Fio}" 
+                    IsReadOnly="False" 
+                    Header="ФИО" 
+                    Width="*"/>
+                <DataGridTextColumn 
+                    Binding="{Binding Path=Dolzh}" 
+                    IsReadOnly="True" 
+                    Header="Должность" 
+                    Width="200"/>
+                <DataGridTextColumn 
+                    Binding="{Binding Path=Podr}" 
+                    IsReadOnly="True" 
+                    Header="Подразделение" 
+                    Width="200"/>
+                <DataGridCheckBoxColumn 
+                    Binding="{Binding Path=Status}" 
+                    IsReadOnly="True" 
+                    Header="Статус" 
+                    Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
